@@ -390,7 +390,7 @@ deno task dev
 
 - **Runtime**: Deno (modern JavaScript/TypeScript runtime)
 - **AI**: Anthropic Claude AI (via Zypher Agent framework)
-- **PDF Processing**: Custom PDF parser
+- **PDF Processing**: pdf-parse library for PDF parsing 
 - **CSV Processing**: Papa Parse library
 - **Excel Processing**: SheetJS library
 - **Frontend**: JavaScript, HTML5, CSS3 (no frameworks needed)
