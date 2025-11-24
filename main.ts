@@ -60,7 +60,7 @@ const agent = new ZypherAgent(
 ];
 
 console.log("\n" + "=".repeat(70));
-console.log("           🚀 DataQuery AI - Intelligent Data Analysis Agent");
+console.log("           🚀 Insightflow - Intelligent Data Analysis Agent");
 console.log("=".repeat(70));
 
 // Application state
