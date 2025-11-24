@@ -86,7 +86,7 @@ When you upload a PDF file, you can:
     deno cache launcher.ts, 
     deno cache webServer.ts
     ```
-6. Create a `.env` file with your API key:
+6. Create a `.env` file with your API key. Your API key can be obtained by creating one here https://www.claude.com/platform/api:
 
 ```bash
 ANTHROPIC_API_KEY=your_api_key_here
