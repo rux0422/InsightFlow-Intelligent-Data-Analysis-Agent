@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightFlow - Intelligent Data Analysis</title>
+  <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">🚀</span>
+          <h1 class="logo-text">InsightFlow</h1>
+        </div>
+        <div class="header-subtitle">Your Intelligent Data Analysis Agent.<br>From Files to Insights, Instantly.</div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">
+            <span class="icon">📁</span>
+            Your Files
+          </h3>
+          <div id="fileList" class="file-list">
+            <div class="empty-state">
+              <span class="empty-icon">📂</span>
+              <p>No files uploaded yet</p>
+            </div>
+          </div>
+          <button id="uploadBtn" class="btn btn-primary">
+            <span class="icon">⬆️</span>
+            Upload File
+          </button>
+          <input type="file" id="fileInput" accept=".csv,.xlsx,.xls,.pdf" style="display: none;">
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">
+            <span class="icon">ℹ️</span>
+            Supported Formats
+          </h3>
+          <ul class="format-list">
+            <li><span class="badge badge-csv">CSV</span> Comma-separated values</li>
+            <li><span class="badge badge-excel">XLSX</span> Excel spreadsheets</li>
+            <li><span class="badge badge-pdf">PDF</span> PDF documents</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">
+            <span class="icon">💡</span>
+            Example Questions
+          </h3>
+          <div class="example-questions">
+            <button class="example-btn">What columns are in the data?</button>
+            <button class="example-btn">Show me the first 10 rows</button>
+            <button class="example-btn">What is the average value?</button>
+            <button class="example-btn">Summarize this document</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Chat Area -->
+      <section class="chat-container">
+        <div id="welcomeScreen" class="welcome-screen">
+          <div class="welcome-content">
+            <div class="welcome-icon">🎯</div>
+            <h2 class="welcome-title">Welcome to InsightFlow</h2>
+            <p class="welcome-description">
+              Upload your CSV, Excel, or PDF files and start asking questions.
+              Our AI will analyze your data and provide intelligent answers.
+            </p>
+            <div class="welcome-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text">Upload a file and then <br>click on the file you uploaded</br></div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">Process the data</div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">Ask questions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="chatArea" class="chat-area" style="display: none;">
+          <div class="chat-header">
+            <button id="clearChatBtn" class="clear-chat-btn" title="Clear chat history">
+              🗑️ Clear Chat
+            </button>
+          </div>
+          <div id="messages" class="messages"></div>
+
+          <div class="input-container">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="questionInput"
+                class="question-input"
+                placeholder="Ask a question about your data..."
+                disabled
+              >
+              <button id="sendBtn" class="send-btn" disabled>
+                <span class="send-icon">➤</span>
+              </button>
+            </div>
+            <div class="input-hint">
+              Press Enter to send 
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- File Processing Modal -->
+    <div id="processingModal" class="modal">
+      <div class="modal-content">
+        <div class="processing-animation">
+          <div class="spinner"></div>
+        </div>
+        <h3 class="processing-title">Processing File...</h3>
+        <p class="processing-text">Please wait while we analyze your data</p>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content success-content">
+        <div class="success-icon">✓</div>
+        <h3 class="success-title">File Processed Successfully!</h3>
+        <div id="successDetails" class="success-details"></div>
+        <div class="success-actions">
+          <button id="closeSuccessBtn" class="btn btn-primary">Start Asking Questions</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/web/app.js"></script>
+</body>
+</html>

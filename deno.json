@@ -1,0 +1,20 @@
+{
+   "tasks": {
+    "start": "deno run -A launcher.ts",
+    "cli": "deno run -A main.ts",
+    "web": "deno run -A webServer.ts",
+    "dev": "deno run -A --watch launcher.ts"
+  },
+  "imports": {
+    "@corespeed/zypher": "jsr:@corespeed/zypher@^0.5.1",
+    "rxjs-for-await": "npm:rxjs-for-await@^1.0.0",
+    "pdf-parse": "npm:pdf-parse@1.1.1",
+    "papaparse": "npm:papaparse@5.4.1",
+    "xlsx": "npm:xlsx@0.18.5",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.0"
+  },
+   "compilerOptions": {
+    "lib": ["deno.window", "deno.unstable"]
+  }
+  
+}
