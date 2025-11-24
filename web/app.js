@@ -583,3 +583,11 @@ function clearChat() {
 
 // Auto-refresh file list every 30 seconds
 setInterval(loadFiles, 30000);
+
+// Cleanup uploaded files when browser tab/window closes
+window.addEventListener('beforeunload', () => {
+  // Use sendBeacon for reliable delivery during page unload
+  // Regular fetch may not complete before the page closes
+  const blob = new Blob([JSON.stringify({})], { type: 'application/json' });
+  navigator.sendBeacon('/api/cleanup', blob);
+});
