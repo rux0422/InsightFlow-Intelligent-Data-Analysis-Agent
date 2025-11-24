@@ -69,7 +69,7 @@ When you upload a PDF file, you can:
 
 ### Prerequisites
 
-- [Deno](https://docs.deno.com/runtime/getting_started/installation/) installed on your system. Install the Deno extension on your VS Code IDE as well.
+- [Deno](https://docs.deno.com/runtime/getting_started/installation/) installed on your system (refer to this link: https://docs.deno.com/runtime/getting_started/installation/). Install the Deno extension (denoland) on your VS Code IDE as well.
 - Anthropic API Key
 
 ### Installation
